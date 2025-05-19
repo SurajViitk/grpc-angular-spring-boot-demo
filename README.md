@@ -1,6 +1,8 @@
 Overview
 ========
 
+This is the fork of [grpc-angular-spring-boot-demo](https://github.com/juliusz-cwiakalski/grpc-angular-spring-boot-demo/tree/master/chat-proxy), I have just updated the frontend libraries and made it work
+
 Goal of this project is to demonstrate [gRPC](https://grpc.io/) based communication between Angular application and java backend.
 
 Main benefits of this approach:
@@ -48,7 +50,8 @@ Build and start frontend and backend without docker and use proxy in docker
     mvn spring-boot:run
 
 ### Frontend
-    cd ${PROJECT_ROOT}/chat-webapp/
+    cd ${PROJECT_ROOT}/ng-chatapp/
+    // optionally required - npm_config_target_arch=x64 npm i grpc
     npm install
     npm run compile
     npm run start
@@ -63,7 +66,7 @@ Open your favourite browser and navigate to http://localhost:8080/
 
 Building and starting with docker compose
 -----------------------------------------
-    cd ${PROJECT_ROOT}/chat-webapp/
+    cd ${PROJECT_ROOT}/ng-chatapp/
     npm run compile
     cd ${PROJECT_ROOT}
     mvn install
@@ -80,7 +83,7 @@ Most important files
 
 * [chat-proto/src/main/proto/chat.proto](chat-proto/src/main/proto/chat.proto) - gRPC / proto messages definitions
 * [chat-backend-grpc/src/main/java/pl/jcw/demo/chat/backend/grpc/ChatServiceImpl.java](chat-backend-grpc/src/main/java/pl/jcw/demo/chat/backend/grpc/ChatServiceImpl.java) - java service implementation
-* [chat-webapp/src/app/api.service.ts](chat-webapp/src/app/api.service.ts) - typescript service client implementation
+* [ng-chatapp/src/app/api.service.ts](ng-chatapp/src/app/api.service.ts) - typescript service client implementation
 * [chat-proxy/envoy(-local).yaml](chat-proxy/envoy.yaml) - envoy proxy configuration
 
 Adding new services and testing locally

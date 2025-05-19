@@ -1,0 +1,47 @@
+{
+  "name": "ng-chatapp",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "temp": "which protoc",
+    "compile": "npx grpc_tools_node_protoc  -I ../chat-proto/src/main/proto/ ../chat-proto/src/main/proto/*.proto  --js_out=import_style=commonjs,binary:src/app/proto --grpc-web_out=import_style=typescript,mode=grpcwebtext:src/app/proto",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.2.0",
+    "@angular/common": "^14.2.0",
+    "@angular/compiler": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/forms": "^14.2.0",
+    "@angular/platform-browser": "^14.2.0",
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "google-protobuf": "~3.21.4",
+    "grpc-web": "~1.5.0",
+    "rxjs": "~7.5.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.13",
+    "@angular/cli": "~14.2.13",
+    "@types/node": "~16.18.50",
+    "@angular/compiler-cli": "^14.2.0",
+    "@types/google-protobuf": "^3.15.12",
+    "@types/jasmine": "~4.0.0",
+    "grpc-tools": "~1.13.0",
+    "jasmine-core": "~4.3.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "protoc-gen-grpc-web": "~1.5.0",
+    "ts-proto": "~2.7.0",
+    "typescript": "~4.7.2"
+  }
+}
