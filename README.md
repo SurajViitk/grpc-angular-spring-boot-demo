@@ -121,3 +121,10 @@ References
 ==========
 
 * https://github.com/kmturley/angular-nest-grpc - helped me to get initial setup of envoy proxy and understand how to call gRPC from typescript
+
+
+Demo
+==========
+
+* [demo 1](./demo/Screen%20Recording%202025-05-19%20at%2010.55.52%E2%80%AFPM.mov)
+  * Envoy proxy translates gRPC for browser to understand. It converts the internal HTTP/2 calls to simple POST HTTP/1.1 calls. Need to check the behaviour for HTTP/2 though (todo). Backend and envoy communicates though regular gRPC. 
