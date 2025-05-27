@@ -128,3 +128,10 @@ Demo
 
 * [demo 1](./demo/Screen%20Recording%202025-05-19%20at%2010.55.52%E2%80%AFPM.mov)
   * Envoy proxy translates gRPC for browser to understand. It converts the internal HTTP/2 calls to simple POST HTTP/1.1 calls. Need to check the behaviour for HTTP/2 though (todo). Backend and envoy communicates though regular gRPC. 
+
+Insight
+==========
+
+* chat.proto contains prototype with models and function to be stubbed in UI 
+* UI generates stub when compiled, we can use Client.function to call method directly
+* Backend generates classes for server when compiled and provide the actual logic inside `ChatServiceImpl`
